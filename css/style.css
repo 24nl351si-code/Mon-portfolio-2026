@@ -32,25 +32,98 @@ justify-content: space-between;
 -moz-box-align: center;
 padding: 2rem 3rem;
 
+
 }
 header h1{
-    color: #534edd;
+    color: #6c63ff;
 }
 header div a{
-    text-decoration-color: none;
+    text-decoration: none;
     font-size:2.2rem ;
     font-weight: bold;
+    color: #534edd;
 
 }
 
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 25px;
+ ul li{   
+    list-style: none; 
+    margin: 25px; 
 }
-nav a{
+ul {
+display: flex;
+}
+ul li a {
     text-decoration: none;
-    font-weight: 400;
-    color: var(--gris-très-foncé);
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 10px 0;
 }
+ul li a:hover{
+    color: #534edd;
+
+}
+ul li a::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #534edd;
+    transition: width 0.3s ease;
+}
+ul li a:hover::after {
+    width: 100%;
+}
+a.active {
+    color: #534edd;
+}
+a.active::after{
+    width: 100%;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    text-align: center;
+}
+.hero img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #534edd;
+    margin: 10rem 2rem;
+}
+.hero h1{
+    color: #534edd;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.hero p{
+    color: #333;
+    font-size: 1.3rem;
+    margin: 1.2rem;
+}
+.hero a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #534edd;
+    color: #eee;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-transform: uppercase ;
+    letter-spacing: 1.1px;
+    font-weight: 600px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.hero a:hover {
+    background-color: #4d034d;
+    transform: translateY(-9px);
+}
+
 
