@@ -122,8 +122,34 @@ a.active::after{
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .hero a:hover {
-    background-color: #4d034d;
-    transform: translateY(-9px);
+    background-color: #01042c;
+    transform: translateY(-20px);
+}
+.apropos {
+    width: 800px;
+    margin: 6rem auto;
+    text-align: center;
+}
+section h2 {
+    color: #534edd;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative; 
+    text-align: center; 
+}
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #534edd;
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+.apropos P {
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 1.3re;
 }
 
 
