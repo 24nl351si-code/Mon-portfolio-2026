@@ -405,4 +405,70 @@ footer a:hover {
 .btn-submit:hover {
     background-color: #01042c;
 }
+/* --- Style des liens et symboles en bas des cartes --- */
 
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1.5px solid #eeeeee; /* La petite ligne grise */
+}
+
+.links i {
+    color: #000; /* Couleur violette pour les symboles */
+    font-size: 1.2rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #01042c;
+    text-decoration: underline;
+}
+
+/* Ajustement du padding du content pour que la ligne touche presque les bords */
+.content {
+    padding: 20px;
+}
+/* --- Styles spécifiques pour la page Divertissement --- */
+
+/* Centrage de la grille si il y a moins d'éléments */
+.projets .cards {
+    justify-content: center;
+}
+
+/* Animation spécifique pour les icônes de divertissement au survol de la carte */
+.card:hover .links i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Style des icônes pour chaque type de divertissement */
+.fa-gamepad { color: #ff4757; }    /* Rouge pour les jeux */
+.fa-film { color: #f1c40f; }       /* Jaune pour le cinéma */
+.fa-chess { color: #2f3542; }      /* Noir/Gris pour les échecs */
+.fa-book-open { color: #2ed573; }  /* Vert pour la lecture */
+
+/* Adaptation de la grille pour 4 éléments (2 par ligne sur tablette) */
+@media (max-width: 1100px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* 1 seule colonne sur petit mobile */
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
